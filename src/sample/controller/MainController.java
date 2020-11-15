@@ -1,17 +1,16 @@
-package sample;
+package sample.controller;
 
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import sample.model.Messages;
+import sample.model.Users;
 
-public class Controller {
+public class MainController {
     @FXML
-    private ListView<String> userListView;
-
-    @FXML
-    private ListView<String> messagesListView;
+    private ListView<String> userListView, messagesListView;
 
     @FXML
     private Label labelID;
@@ -23,7 +22,7 @@ public class Controller {
     Messages messages = new Messages(FXCollections.observableArrayList());
     Users users = new Users(FXCollections.observableArrayList());
 
-    public Controller(){
+    public MainController(){
         messages.addElement("Привет!");
         users.addElement("Вы");
         users.addElement("Иван");
@@ -43,7 +42,7 @@ public class Controller {
 
     @FXML
     public void addWord(){
-        String message = textFielsSend.getText();
+        String message = users.getElement(0) + " - " + textFielsSend.getText();
         messages.addElement(message);
         Integer size =  messagesListView.getItems().size();
         messagesListView.getItems().add(size-1, message);

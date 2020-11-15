@@ -6,12 +6,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.net.URL;
+
 public class Main extends Application {
-    private final String PATH_SAMPLE_XML = "sample.fxml";
+    private final String PATH_SAMPLE_XML = "view/sample.fxml";
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource(PATH_SAMPLE_XML));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(PATH_SAMPLE_XML));
+        Parent root = loader.load();
         primaryStage.setTitle("");
         primaryStage.setScene(new Scene(root, 640, 480));
         primaryStage.show();

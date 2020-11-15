@@ -1,10 +1,8 @@
-package sample;
+package sample.model;
 
-import javafx.beans.value.ObservableStringValue;
 import javafx.collections.ObservableList;
 
-
-public class Users {
+public class Messages {
     ObservableList<String> array;
 
     public ObservableList<String> getList() {
@@ -19,7 +17,7 @@ public class Users {
         }
     }
 
-    public Users(ObservableList<String> array) {
+    public Messages(ObservableList<String> array) {
         this.array = array;
     }
 
