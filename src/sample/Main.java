@@ -7,11 +7,12 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
+    private final String PATH_SAMPLE_XML = "sample.fxml";
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
+        Parent root = FXMLLoader.load(getClass().getResource(PATH_SAMPLE_XML));
+        primaryStage.setTitle("");
         primaryStage.setScene(new Scene(root, 640, 480));
         primaryStage.show();
         primaryStage.setResizable(false);
