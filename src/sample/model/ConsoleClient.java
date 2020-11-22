@@ -26,6 +26,8 @@ public class ConsoleClient {
     public ConsoleClient(String host, int port) {
         this.host = SERVER_ADRESS;
         this.port = SERVER_PORT;
+
+
     }
 
     static public void generateConsoleClient(){
